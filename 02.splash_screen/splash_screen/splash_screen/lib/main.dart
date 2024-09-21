@@ -16,18 +16,25 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF3256a8),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Image.asset(
-            'asset/img/logo.png',
+        backgroundColor: Color(0xFF3256a8),
+        body: Padding(
+          padding: EdgeInsets.symmetric(
+            horizontal: 32.0,
           ),
-          CircularProgressIndicator(
-            color: Colors.white,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Image.asset(
+                'asset/img/logo.png',
+              ),
+              SizedBox(
+                height: 29.0,
+              ),
+              CircularProgressIndicator(
+                color: Colors.white,
+              ),
+            ],
           ),
-        ],
-      ),
-    );
+        ));
   }
 }
