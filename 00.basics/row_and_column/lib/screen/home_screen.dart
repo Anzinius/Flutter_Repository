@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:row_and_column/const/colors.dart';
 
@@ -18,33 +16,18 @@ class HomeScreen extends StatelessWidget {
             children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  Container(
-                    height: 50.0,
-                    width: 50.0,
-                    color: Colors.red,
-                  ),
-                  Container(
-                    height: 50.0,
-                    width: 50.0,
-                    color: Colors.orange,
-                  ),
-                  Container(
-                    height: 50.0,
-                    width: 50.0,
-                    color: Colors.yellow,
-                  ),
-                  Container(
-                    height: 50.0,
-                    width: 50.0,
-                    color: Colors.green,
-                  ),
-                ],
+                children: colors
+                    .map(
+                      (e) => Container(
+                        height: 50.0,
+                        width: 50.0,
+                        color: e,
+                      ),
+                    )
+                    .toList(),
               ),
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                //mainAxisSize: MainAxisSize.min,
-                //crossAxisAlignment: CrossAxisAlignment.stretch,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Container(
                     height: 50.0,
@@ -55,35 +38,18 @@ class HomeScreen extends StatelessWidget {
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
-                //mainAxisSize: MainAxisSize.min,
-                //crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: [
-                  Container(
-                    height: 50.0,
-                    width: 50.0,
-                    color: Colors.red,
-                  ),
-                  Container(
-                    height: 50.0,
-                    width: 50.0,
-                    color: Colors.orange,
-                  ),
-                  Container(
-                    height: 50.0,
-                    width: 50.0,
-                    color: Colors.yellow,
-                  ),
-                  Container(
-                    height: 50.0,
-                    width: 50.0,
-                    color: Colors.green,
-                  ),
-                ],
+                children: colors
+                    .map(
+                      (e) => Container(
+                        height: 50.0,
+                        width: 50.0,
+                        color: e,
+                      ),
+                    )
+                    .toList(),
               ),
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                //mainAxisSize: MainAxisSize.min,
-                //crossAxisAlignment: CrossAxisAlignment.stretch,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Container(
                     height: 50.0,
@@ -99,32 +65,3 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
-
-
-//  [
-//             Flexible(
-//               flex: 2,
-//               fit: FlexFit.loose,
-//               child: Container(
-//                 height: 50.0,
-//                 width: 50.0,
-//                 color: Colors.red,
-//               ),
-//             ),
-//             Expanded(
-//               flex: 3,
-//               child: Container(
-//                 height: 50.0,
-//                 width: 50.0,
-//                 color: Colors.orange,
-//               ),
-//             ),
-//             Expanded(
-//               child: Container(
-//                 height: 50.0,
-//                 width: 50.0,
-//                 color: Colors.yellow,
-//               ),
-//             ),
-//           ]
-          
