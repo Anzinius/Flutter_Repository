@@ -16,6 +16,15 @@ class HomeScreen extends StatelessWidget {
         backgroundColor: Colors.pink,
         title: const Text('ANZINIUS'),
         centerTitle: true,
+        actions: [
+          IconButton(
+              onPressed: () {
+                controller.loadRequest(homeUrl);
+              },
+              icon: Icon(
+                Icons.home,
+              ))
+        ],
       ),
       body: WebViewWidget(
         controller: controller,
