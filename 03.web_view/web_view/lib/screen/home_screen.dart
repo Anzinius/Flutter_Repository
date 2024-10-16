@@ -5,7 +5,9 @@ final homeUrl = Uri.parse('https://github.com/Anzinius');
 
 // ignore: must_be_immutable
 class HomeScreen extends StatelessWidget {
-  WebViewController controller = WebViewController()..loadRequest(homeUrl);
+  WebViewController controller = WebViewController()
+    ..setJavaScriptMode(JavaScriptMode.unrestricted)
+    ..loadRequest(homeUrl);
 
   HomeScreen({super.key});
 
